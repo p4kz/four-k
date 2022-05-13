@@ -1,0 +1,31 @@
+
+.img {
+  height: 300px;
+}
+
+.word {
+  text-align: center;
+  font-size: 4rem;
+  margin: 6rem 0 6rem 0;
+  color: var(--font-primary);
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  width: 360px;
+  height: 150px;
+}
+
+.keys button {
+  border: none;
+  width: 25.21px;
+  margin: 2px;
+  padding: .2rem;
+  background: none;
+  border: solid 1px #fff;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 50%;
+}

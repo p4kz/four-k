@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+body {
+  --bg: #121214;
+  --font-primary: #E5E5E5;
+  --font-secundary: #0A3871;
+  --border: #0A3871;
+
+  background: var(--bg);
+}
+
+button {
+  cursor: pointer;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
