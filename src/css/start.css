@@ -1,0 +1,68 @@
+
+.start-box {
+  display: initial;
+}
+
+.start-menu {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.btn-start {
+  margin: 0 0 1rem 0;
+  font-size: 1.58rem;
+  background: none;
+}
+
+.btn-addword {
+  margin: 1rem 0 3rem 0;
+  font-size: 1.4rem;
+  background: none;
+}
+
+.btn-addword:hover, .btn-start:hover {
+  transition: 500ms;
+  transform: scale(1.06);
+  color: var(--green);
+}
+
+.btn-addword:active, .btn-start:active {
+  color: var(--red);
+}
+
+.addword-menu {
+  opacity: 0;
+  transition: 500ms;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.addword-text {
+  border: none;
+  padding: .5rem;
+  width: 100%;
+}
+
+.btn-addword-menu {
+  font-size: 1.4rem;
+  padding: .5rem;
+  border-radius: 0;
+  background: var(--roxo);
+  color: var(--font-primary);
+}
+
+.btn-addword-menu:active {
+  background: var(--green);
+  color: var(--bg);
+}
+
+.addword-warning {
+  position: absolute;
+  top: -10px;
+  color: var(--font-primary);
+}

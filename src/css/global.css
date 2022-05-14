@@ -12,15 +12,26 @@ html, body {
 }
 
 body {
-  --bg: #121214;
+  --bg: #121219;
   --font-primary: #E5E5E5;
   --font-secundary: #0A3871;
   --border: #0A3871;
+  --button-bg: #0A3871;
+
+  --roxo: #8257e5;
+  --red: #eb3223;
+  --green: #04d361;
 
   background: var(--bg);
+  font-family: 'Press Start 2P', cursive;
 }
 
 button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  border: 0;
+  color: var(--font-primary);
+  border-radius: 2.4rem;
   cursor: pointer;
 }
 
