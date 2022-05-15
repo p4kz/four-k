@@ -12,9 +12,9 @@ html, body {
 }
 
 body {
-  --bg: #121219;
+  --bg: #121214;
   --font-primary: #E5E5E5;
-  --font-secundary: #0A3871;
+  --font-secundary: #121214;
   --border: #0A3871;
   --button-bg: #0A3871;
 
@@ -23,7 +23,14 @@ body {
   --green: #04d361;
 
   background: var(--bg);
+  background: url('../img/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Press Start 2P', cursive;
+}
+
+canvas {
+  box-shadow: 5px 5px 0px #000;
 }
 
 button {
@@ -37,4 +44,30 @@ button {
 #container {
   display: flex;
   justify-content: center;
+  min-height: 95%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5%;
+  padding-top: 1rem;
+  font-size: 1.6rem;
+  background: var(--bg);
+}
+
+footer a {
+  margin-left: .5rem;
+}
+
+footer a, p {
+  color: var(--font-primary);
+  text-decoration: none;
+  transition: 1000ms;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--green);
 }

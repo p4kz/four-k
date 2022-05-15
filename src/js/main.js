@@ -43,7 +43,7 @@ let pen = screen.getContext('2d')
 
 
 // head square
-pen.fillStyle = 'darkgreen'
+pen.fillStyle = '#04d361'
 pen.fillRect(0, 0, 350, 300)
 
 // eyes left square
@@ -76,8 +76,6 @@ const wordData = [
 let secretWord = wordData[Math.floor(Math.random() * wordData.length)]
 secretWord = secretWord.toUpperCase()
 console.log(secretWord)
-
-// Mostra
 
 let difficultyPlaying = 5
 let list = []
@@ -124,7 +122,7 @@ function isValidLetter(key) {
     moveLava()
     
     if (difficultyPlaying === 0) {
-      boxWarningText.innerHTML = `O CREEPER MORREU! <br><br> a palavra era ${secretWord}`
+      boxWarningText.innerHTML = `O CREEPER EXPLODIU! <br><br> a palavra era ${secretWord}`
       show(boxWarning, 'initial')
     }  
   } else {
