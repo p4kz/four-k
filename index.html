@@ -13,8 +13,7 @@
     <title>wordplay</title>
   </head>
   <body>
-      <div id="container">
-
+    <div id="container">
         <div id="start-box">
           <div class="start-menu">
             <button class="btn-start" onclick="startGame()">Começar a jogar</button>
@@ -29,55 +28,67 @@
 
         <div id="game-box">
           <button class="btn-exit" onclick="exitGame()"> <- </button>
-
-          <div class="image-box">
-            <canvas width="350" height="300"></canvas>
-          </div>  
-          <div class="result">
-            <p class="word-result">PALAVRA</p>
-            <p class="history-result">SDFHJKL</p>
+          <div class="lava-box">
+            <div class="color-lava-box">
+              <svg class="svg-lava" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 420">
+                <path fill="#bc3714" fill-opacity="1" d="M0,0L6.2,10.7C12.3,21,25,43,37,80C49.2,117,62,171,74,208C86.2,245,98,267,111,229.3C123.1,192,135,96,148,58.7C160,21,172,43,185,69.3C196.9,96,209,128,222,160C233.8,192,246,224,258,202.7C270.8,181,283,107,295,117.3C307.7,128,320,224,332,266.7C344.6,309,357,299,369,288C381.5,277,394,267,406,266.7C418.5,267,431,277,443,234.7C455.4,192,468,96,480,85.3C492.3,75,505,149,517,165.3C529.2,181,542,139,554,106.7C566.2,75,578,53,591,80C603.1,107,615,181,628,224C640,267,652,277,665,266.7C676.9,256,689,224,702,229.3C713.8,235,726,277,738,293.3C750.8,309,763,299,775,245.3C787.7,192,800,96,812,96C824.6,96,837,192,849,208C861.5,224,874,160,886,117.3C898.5,75,911,53,923,85.3C935.4,117,948,203,960,240C972.3,277,985,267,997,266.7C1009.2,267,1022,277,1034,234.7C1046.2,192,1058,96,1071,69.3C1083.1,43,1095,85,1108,138.7C1120,192,1132,256,1145,245.3C1156.9,235,1169,149,1182,138.7C1193.8,128,1206,192,1218,218.7C1230.8,245,1243,235,1255,245.3C1267.7,256,1280,288,1292,293.3C1304.6,299,1317,277,1329,240C1341.5,203,1354,149,1366,138.7C1378.5,128,1391,160,1403,192C1415.4,224,1428,256,1434,272L1440,288L1440,0L1433.8,0C1427.7,0,1415,0,1403,0C1390.8,0,1378,0,1366,0C1353.8,0,1342,0,1329,0C1316.9,0,1305,0,1292,0C1280,0,1268,0,1255,0C1243.1,0,1231,0,1218,0C1206.2,0,1194,0,1182,0C1169.2,0,1157,0,1145,0C1132.3,0,1120,0,1108,0C1095.4,0,1083,0,1071,0C1058.5,0,1046,0,1034,0C1021.5,0,1009,0,997,0C984.6,0,972,0,960,0C947.7,0,935,0,923,0C910.8,0,898,0,886,0C873.8,0,862,0,849,0C836.9,0,825,0,812,0C800,0,788,0,775,0C763.1,0,751,0,738,0C726.2,0,714,0,702,0C689.2,0,677,0,665,0C652.3,0,640,0,628,0C615.4,0,603,0,591,0C578.5,0,566,0,554,0C541.5,0,529,0,517,0C504.6,0,492,0,480,0C467.7,0,455,0,443,0C430.8,0,418,0,406,0C393.8,0,382,0,369,0C356.9,0,345,0,332,0C320,0,308,0,295,0C283.1,0,271,0,258,0C246.2,0,234,0,222,0C209.2,0,197,0,185,0C172.3,0,160,0,148,0C135.4,0,123,0,111,0C98.5,0,86,0,74,0C61.5,0,49,0,37,0C24.6,0,12,0,6,0L0,0Z"></path>
+              </svg>
+            </div>
+            <div class="image-box">
+              <canvas width="350" height="300"></canvas>
+            </div>  
           </div>
-
+          <div class="result">
+            <div class="word-result-box">
+            </div>
+          </div>
           <div class="keyboard">
             <div class="keys">
-              <button class="keyQ">Q</button>
-              <button class="keyW">W</button>
-              <button class="keyE">E</button>
-              <button class="keyR">R</button>
-              <button class="keyT">T</button>
-              <button class="keyY">Y</button>
-              <button class="keyU">U</button>
-              <button class="keyI">I</button>
-              <button class="keyO">O</button>
-              <button class="keyP">P</button>
+              <button class="keyQ" onclick="pressKey('Q')">Q</button>
+              <button class="keyW" onclick="pressKey('W')">W</button>
+              <button class="keyE" onclick="pressKey('E')">E</button>
+              <button class="keyR" onclick="pressKey('R')">R</button>
+              <button class="keyT" onclick="pressKey('T')">T</button>
+              <button class="keyY" onclick="pressKey('Y')">Y</button>
+              <button class="keyU" onclick="pressKey('U')">U</button>
+              <button class="keyI" onclick="pressKey('I')">I</button>
+              <button class="keyO" onclick="pressKey('O')">O</button>
+              <button class="keyP" onclick="pressKey('P')">P</button>
             </div>
             <div class="keys">
-              <button class="keyA">A</button>
-              <button class="keyS">S</button>
-              <button class="keyD">D</button>
-              <button class="keyF">F</button>
-              <button class="keyG">G</button>
-              <button class="keyH">H</button>
-              <button class="keyJ">J</button>
-              <button class="keyK">K</button>
-              <button class="keyL">L</button>
+              <button class="keyA" onclick="pressKey('A')">A</button>
+              <button class="keyS" onclick="pressKey('S')">S</button>
+              <button class="keyD" onclick="pressKey('D')">D</button>
+              <button class="keyF" onclick="pressKey('F')">F</button>
+              <button class="keyG" onclick="pressKey('G')">G</button>
+              <button class="keyH" onclick="pressKey('H')">H</button>
+              <button class="keyJ" onclick="pressKey('J')">J</button>
+              <button class="keyK" onclick="pressKey('K')">K</button>
+              <button class="keyL" onclick="pressKey('L')">L</button>
             </div>
             <div class="keys">
-              <button class="keyZ">Z</button>
-              <button class="keyX">X</button>
-              <button class="keyC">C</button>
-              <button class="keyV">V</button>
-              <button class="keyB">B</button>
-              <button class="keyN">N</button>
-              <button class="keyM">M</button>
+              <button class="keyZ" onclick="pressKey('Z')">Z</button>
+              <button class="keyX" onclick="pressKey('X')">X</button>
+              <button class="keyC" onclick="pressKey('C')">C</button>
+              <button class="keyV" onclick="pressKey('V')">V</button>
+              <button class="keyB" onclick="pressKey('B')">B</button>
+              <button class="keyN" onclick="pressKey('N')">N</button>
+              <button class="keyM" onclick="pressKey('M')">M</button>
             </div>
           </div>
-
+          <div class="warning-box">
+            <div class="warning-menu">
+              <img src="http://1.bp.blogspot.com/-HTaQ9Cx-OIM/Uc2srtEhm9I/AAAAAAAAAHc/aOshJjFR1S4/s500/gif12.gif" alt="" >
+              <p></p>
+              <div class="btn-warning-box">
+                <button onclick="exitGame()">Voltar</button>
+                <button onclick="restart()">Restart</button>
+              </div>
+            </div>
           </div>
-
         </div>
-      </div>
-      <script src="./src/js/canvas.js"></script>
-      <script src="./src/js/main.js"></script>
+      </div>        
+    </div>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>

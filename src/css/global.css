@@ -31,7 +31,6 @@ button {
   font-size: 1.6rem;
   border: 0;
   color: var(--font-primary);
-  border-radius: 2.4rem;
   cursor: pointer;
 }
 
