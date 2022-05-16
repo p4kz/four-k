@@ -19,9 +19,22 @@
             <button class="btn-start" onclick="startGame()">Começar a jogar</button>
             <button class="btn-addword" onclick="addWord()">Adicionar palavra</button>
             <div class="addword-menu">
-              <p class="addword-warning">error or success text</p>
               <input class="addword-text" placeholder="digite a palavra aqui..." type="text">
-              <button class="btn-addword-menu" onclick="addNewWord()">add</button>
+              <div class="addword-warning"></div>
+              <div class="addword-button-box">
+                <button class="btn-addword-menu" onclick="addNewWord()">Adicionar</button>
+                <button class="btn-addword-info">i</button> 
+                <button class="btn-addword-exit" onclick="addWordExit()">x</button> 
+              </div>
+              <ul class="addword-list">
+                <span>Verifique se sua palavra é</span><br><br>
+                <li>MAIOR QUE 3 LETRAS</li>
+                <li>MENOR QUE 12 LETRAS</li>
+                <li>SEM ACENTUACAO</li>
+                <li>SEM NUMEROS</li>
+                <li>SEM SIMBOLOS</li>
+                <p>double click para fechar</p>
+              </ul>
             </div>
           </div>
         </div>

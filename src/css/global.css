@@ -21,6 +21,9 @@ body {
   --roxo: #8257e5;
   --red: #eb3223;
   --green: #04d361;
+  --blue: #0A3871;
+  --white: #e5e5f6;
+
 
   background: var(--bg);
   background: url('../img/bg.png');

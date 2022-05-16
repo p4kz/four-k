@@ -46,23 +46,50 @@
   opacity: 0;
   transition: 500ms;
   display: flex;
-  flex-direction: row;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  padding: 1rem;
+  background: #222 ;
+  box-shadow: 5px 5px 0px #000;
+
+}
+
+.addword-menu input {
+  background-color: #222;
 }
 
 .addword-text {
   border: none;
   padding: .5rem;
   width: 100%;
+  color: var(--font-primary);
+}
+
+.addword-button-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .btn-addword-menu {
   font-size: 1.4rem;
+  width: 100%;
   padding: .5rem;
   border-radius: 0;
   background: var(--roxo);
   color: var(--font-primary);
+}
+.btn-addword-info {
+  background: var(--blue);
+  padding: .5rem;
+  margin-left: 5px; 
+}
+
+.btn-addword-exit {
+  background: var(--red);
+  padding: .5rem;
+  margin-left: 5px; 
 }
 
 .btn-addword-menu:active {
@@ -71,7 +98,35 @@
 }
 
 .addword-warning {
-  position: absolute;
-  top: -10px;
+  padding: 0.5rem;
+  height: 2rem;
+  width: 100%;
   color: var(--font-primary);
+}
+
+.addword-list {
+  display: none;
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+  padding: 1rem 3rem 1rem 3rem;
+  font-size: 1rem;
+  background-color: var(--white);
+}
+
+.addword-list li {
+  margin-top: 5px;
+  color: #222;
+}
+
+.addword-list span {
+  font-size: 1rem;
+}
+
+.addword-list p {
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  font-size: .6rem;
+  color: #fff;
 }
