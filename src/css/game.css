@@ -1,6 +1,6 @@
 
 #game-box {
-  display: none;
+  display: initial;
   padding: 7rem 2rem 2rem 2rem;
   background: rgba(34, 34, 34, 0.425);
 }
@@ -103,7 +103,9 @@
   border-radius: 50%;
 }
 
-.keys button:disabled {
+.keys .disabled {
+  color: #0023;
+  border-color: #0023;
   cursor: context-menu;
 }
 
