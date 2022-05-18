@@ -4,9 +4,24 @@
   box-sizing: border-box;
 }
 
-body {
-  --bg: #121214;
+html, body {
+  --bg: #E5E5E5;
 
-  --font-primary: #E5E5E5;
-  --blue: #0A3871;
+  --font-primary: #0A3871;
+  --font-secundary: #E5E5E5;
+
+  --border-primary: #0A3871;
+  --border-secundary: #121214;
+
+  --green: #04D361;
+  --black: #121214;
+  --blue: #0A3871; 
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 62.5%;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
 }
