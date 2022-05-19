@@ -1,4 +1,5 @@
 #game-box {
+  display: none;
   width: 80%;
   margin: 0 auto 0 auto;
   color: var(--font-primary);
@@ -28,6 +29,7 @@
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto ;
   gap: 4px;
+  padding: 0.4rem;
   width: 100%;
   max-width: 30rem;
   margin-bottom: .5rem;

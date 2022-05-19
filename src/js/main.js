@@ -87,8 +87,4 @@ function reset() {
   generateButtons()
 }
 
-randomWord()
-generateButtons()
-guessedWord()
-
 document.querySelector('.max-attempts').innerHTML = maxAttempts
