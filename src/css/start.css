@@ -1,0 +1,46 @@
+#start-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: none;
+  background: var(--bg) ;
+}
+
+.menu-start-box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 350px;
+  min-width: 250px;
+  padding: 0 .5rem 0 .5rem;
+  margin: 0 auto 0 auto;
+}
+
+.button-start-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-start-box button {
+  border-radius: 1rem;
+  width: 200px;
+  height: 3rem;
+}
+
+.btn-start {
+  border: 0;
+  margin-bottom: .5rem;
+  color: var(--font-secundary);
+  background: var(--blue);
+}
+
+.btn-addword {
+  border: solid 1px var(--border-primary);
+  color: var(--font-primary);
+}
+

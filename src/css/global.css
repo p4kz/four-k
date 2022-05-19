@@ -17,11 +17,11 @@ html, body {
   --green: #04D361;
   --black: #121214;
   --blue: #0A3871; 
-  width: 100vw;
-  height: 100vh;
 }
 
 body {
+  width: 100vw;
+  min-height: 100vh;
   font-size: 62.5%;
   font-family: 'Inter', sans-serif;
   background: var(--bg);
@@ -40,5 +40,6 @@ button:active {
 }
 
 #container {
+  position: relative;
   height: 100vh;
 }

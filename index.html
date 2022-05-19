@@ -7,23 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./src/css/start.css">
     <link rel="stylesheet" href="./src/css/game.css">
     <link rel="stylesheet" href="./src/css/global.css"> 
     <title>wipe</title>
   </head>
   <body>
     <div id="container">
-      <div id="game-box">
 
+      <div id="start-box">
+        <div class="menu-start-box">
+          <div class="button-start-box">
+            <button class="btn-start" onclick="startGame()">Comece a jogar</button>
+            <button class="btn-addword" onclick="addWord()">Adicionar palavra</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="game-box">
         <div class="image-box">
           <img class="image" src="./src/img/try0.svg" alt="Forca + Boneco de palito">
-        </div>        
-
-        
+        </div>                
         <div class="result-box">
           <p class="secret-word">secret</p>
         </div>
-        
         <div class="control-box">
           <p>Escolha uma letra para começar jogar</p>
           <div class="keyboard-box"></div>
@@ -35,6 +43,7 @@
         </div>
 
       </div>
+      
     </div>
     <script src="./src/js/main.js"></script>
   </body>

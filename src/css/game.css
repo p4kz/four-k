@@ -4,10 +4,6 @@
   color: var(--font-primary);
 }
 
-.image-box {
-  margin-top: 20px;
-}
-
 .image-box, .image-box img {
   width: 100%;
   height: 25rem;
