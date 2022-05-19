@@ -96,6 +96,36 @@
   height: 20px;
 }
 
+.success {
+  color: var(--green);
+}
+
+.cancel {
+  color: var(--red);
+}
+
+.addword-info-box {
+  display: none;
+  margin: .5rem 0 .5rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.addword-info-box h4 {
+  font-size: .8rem;
+  margin-bottom: .2rem;
+}
+
+.addword-info-box li {
+  font-size: .9rem;
+}
+
+.addword-info-box p {
+  margin-top: .5rem;
+  text-align: center;
+}
+
 .button-addword-box {
   display: flex;
   flex-direction: row;

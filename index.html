@@ -24,11 +24,25 @@
 
           <div class="menu-addword-box">
             <div class="add-word-actions">
-              <button class="btn-info-input">info</button>
+              <button class="btn-info-input" onclick="infoAddWord()">info</button>
               <button class="btn-exit-addword" onclick="exitAddWord()">X</button>
             </div>
             <input class="text-user" type="text" placeholder="digite a palavra aqui...">
-            <p class="add-word-resp">foi enviada com successo</p>
+            <div class="add-word-resp">
+              <p class="success"></p>
+              <p class="cancel"></p>
+            </div>
+            <div class="addword-info-box">
+              <ul>
+                <h4><strong>A palavra tem que ser :</strong></h4>
+                <li>Menor que 8 letras</li>
+                <li>Maior que 3 letras</li>
+                <li>Sem acentos</li>
+                <li>Sem numeros</li>
+                <li>Sem simbolos</li>
+              </ul>
+              <p>Click duas vezes para fechar</p>
+            </div>
             <div class="button-addword-box">
               <button class="btn-save-word" >Salvar</button>
             </div>
@@ -57,7 +71,7 @@
       </div>
 
     </div>
-    <script src="./src/js/main.js"></script>
     <script src="./src/js/start.js"></script>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>

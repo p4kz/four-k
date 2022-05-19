@@ -29,10 +29,18 @@ body {
   background: var(--bg);
 }
 
+button {
+  cursor: pointer;
+  transition: 500ms;
+}
+
 button:disabled {
+  opacity: .5;
   background: var(--disabled);
   border-color: var(--border-secundary);
   color: var(--border-secundary);
+  cursor: context-menu;
+  transition: 500ms;
 }
 
 button:active {
