@@ -13,15 +13,32 @@ html, body {
   --border-primary: #0A3871;
   --border-secundary: #121214;
 
+  --disabled: #12121423;
   --green: #04D361;
   --black: #121214;
   --blue: #0A3871; 
+  width: 100vw;
+  height: 100vh;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   font-size: 62.5%;
   font-family: 'Inter', sans-serif;
   background: var(--bg);
+}
+
+button:disabled {
+  background: var(--disabled);
+  border-color: var(--border-secundary);
+  color: var(--border-secundary);
+}
+
+button:active {
+  border: solid 1px var(--border-secundary);
+  color: var(--black);
+  background: var(--green);
+}
+
+#container {
+  height: 100vh;
 }

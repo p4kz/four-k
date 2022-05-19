@@ -1,11 +1,73 @@
-/* #game-box {
+#game-box {
   width: 80%;
-  height: 100%;
   margin: 0 auto 0 auto;
-  background: #222;
+  color: var(--font-primary);
+}
+
+.image-box {
+  margin-top: 20px;
 }
 
 .image-box, .image-box img {
   width: 100%;
-  height: 30rem;
-} */
+  height: 25rem;
+}
+.result-box {
+  margin: .5rem 0 .5rem 0;
+}
+
+.secret-word {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.control-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-box {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto ;
+  gap: 4px;
+  width: 100%;
+  max-width: 30rem;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+}
+
+.btn-keyboard {
+  padding: .5rem;
+  border-radius: .5rem;
+  border: 1px solid var(--border-primary);
+  color: var(--font-primary);
+}
+
+.buttons-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 67px;
+  width: 100%;
+}
+
+.buttons-box button {
+  margin: .5rem;
+  border-radius: 1rem;
+  height: 3rem;
+  width: 14rem;
+}
+
+.btn-reset {
+  border: 0;
+  background: var(--blue);
+  color: var(--font-secundary);
+}
+
+.btn-surrender {
+  border: solid 1px var(--border-primary);
+  color: var(--font-primary);
+}

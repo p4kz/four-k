@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./src/css/global.css"> 
     <link rel="stylesheet" href="./src/css/game.css">
+    <link rel="stylesheet" href="./src/css/global.css"> 
     <title>wipe</title>
   </head>
   <body>
@@ -19,8 +19,7 @@
           <img class="image" src="./src/img/try0.svg" alt="Forca + Boneco de palito">
         </div>        
 
-        <p class="score-box">Tentativas: <span class="attempts">0</span> / <span class="max-attempts"></span></p>
-      
+        
         <div class="result-box">
           <p class="secret-word">secret</p>
         </div>
@@ -28,7 +27,11 @@
         <div class="control-box">
           <p>Escolha uma letra para começar jogar</p>
           <div class="keyboard-box"></div>
-          <button class="btn-reset" onclick="reset()">Novo jogo</button>
+          <p class="score-box">Tentativas: <span class="attempts">0</span> / <span class="max-attempts"></span></p>
+          <div class="buttons-box">
+            <button class="btn-reset" onclick="reset()">Novo jogo</button>
+            <button class="btn-surrender" onclick="surrender()">Desistir</button>
+          </div>
         </div>
 
       </div>
