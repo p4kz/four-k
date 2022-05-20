@@ -51,7 +51,7 @@ function handleGuess(chosenLetter) {
 }
 
 function updadeImage() {
-  image.src = `./src/img/try${attempts}.svg`
+  image.src = `./src/assets/img/try${attempts}.svg`
 }
 
 function guessedWord() {
@@ -85,7 +85,7 @@ function youLost() {
 function reset() {
   attempts = 0
   guessed = []
-  image.src = "./src/img/try0.svg"
+  image.src = "./src/assets/img/try0.svg"
   response.innerHTML = '' 
 
   show(infoControl, 'initial')

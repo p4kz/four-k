@@ -5,11 +5,13 @@
   box-sizing: border-box;
 }
 
-html, body {
+body.light {
   --bg: #E5E5E5;
+  --bg-secundary: #fff;
 
   --font-primary: #0A3871;
-  --font-secundary: #E5E5E5;
+  --font-secundary: #121214;
+  --font-tertiary: #E5E5E5;
 
   --border-primary: #0A3871;
   --border-secundary: #121214;
@@ -17,18 +19,48 @@ html, body {
   --disabled: #12121423;
 
   --red: #990000;
-  --green: #04D361;
+  --black-g: #121214;
   --black: #121214;
+  --green: #04D361;
+  --blue: #0A3871; 
+}
+
+body.dark {
+  --bg: #121214;
+  --bg-secundary: rgba(34, 34, 34, 0.37);
+  
+  --font-primary: #E5E5E5;
+  --font-secundary: #E5E5E5;
+  --font-tertiary: #E5E5E5;
+  
+  --border-primary: #0A3871;
+  --border-secundary: #121214;
+
+  --disabled: #979ea713;
+  
+  --red: #990000;
+  --green: #04D361;
+  --black-g: #121214;
+  --black: #E5E5E5;
   --blue: #0A3871; 
 }
 
 body {
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  min-height: 100%;
   font-size: 62.5%;
   font-family: 'Inter', sans-serif;
   background: var(--bg);
 }
+
+header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: var(--bg);
+  height: 3rem;
+}
+
 
 button {
   cursor: pointer;
@@ -38,18 +70,55 @@ button:disabled {
   opacity: .5;
   background: var(--disabled);
   border-color: var(--border-secundary);
-  color: var(--border-secundary);
+  color: var(--font-secundary);
   cursor: context-menu;
   transition: 500ms;
 }
 
 button:active {
   border: solid 1px var(--border-secundary);
-  color: var(--black);
+  color: var(--black-g);
   background: var(--green);
 }
 
 #container {
   position: relative;
   height: 100vh;
+}
+
+#darkmode-button {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 1rem;
+  padding: .3rem;
+  border: solid 1px var(--font-secundary);
+  color: var(--font-secundary);
+  background: var(--bg);
+}
+
+#darkmode-button img {
+  width: 20px;
+}
+
+body.light .reload-normal {
+  display: initial;
+}
+
+body.light .reload-correct {
+  display: none;
+}
+
+body.light .reload-normal-sun {
+  display: none;
+}
+
+body.dark .reload-correct {
+  display: none;
+}
+
+body.dark .reload-normal {
+  display: none;
 }

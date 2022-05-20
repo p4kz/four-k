@@ -58,8 +58,6 @@ addWordInfoBox.addEventListener('dblclick', () => {
   disabled('.btn-info-input', false)
 })
 
-
-
 function addNewWord() {
   let invalid = (
     '0123456789ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêë`^~;:?>'+

@@ -7,12 +7,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./src/css/media-query.css">
     <link rel="stylesheet" href="./src/css/start.css">
     <link rel="stylesheet" href="./src/css/game.css">
     <link rel="stylesheet" href="./src/css/global.css"> 
-    <title>wipe</title>
+    <title>for<k></title>
   </head>
   <body>
+    <header>
+      <button onclick='toggleMode()' id='darkmode-button' class="mode-button">
+        <img class="reload-normal" src="./src/assets/icon/moon-light.svg" alt="Imagem lua">
+        <img class="reload-normal-sun" src="./src/assets/icon/sun-dim-light.svg" alt="Imagem sol">
+        <img class="reload-correct"src="./src/assets/icon/moon-light-d.svg" alt="Imagem lua">
+      </button>
+    </header>
     <div id="container">
 
       <div id="start-box">
@@ -51,10 +59,10 @@
 
         </div>
       </div>
-
+      
       <div id="game-box">
         <div class="image-box">
-          <img class="image" src="./src/img/try0.svg" alt="Forca + Boneco de palito">
+          <img class="image" src="./src/assets/img/try0.svg" alt="Forca + Boneco de palito">
         </div>                
         <div class="result-box">
           <p class="info-response">A palavra era: </p>
@@ -73,10 +81,14 @@
             <button class="btn-surrender" onclick="surrender()">Desistir</button>
           </div>
         </div>
-
+        
       </div>
-
+      
+      <div class="link">
+        <p>Com 💜</p><a href="https://github.com/p4kz" target="_blank">p4kz</a>
+      </div> 
     </div>
+    <script src="./src/js/dark.js"></script>
     <script src="./src/js/start.js"></script>
     <script src="./src/js/main.js"></script>
   </body>
