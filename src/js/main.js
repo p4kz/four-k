@@ -19,7 +19,7 @@ function randomWord() {
 }
 
 function generateButtons() {
-  const keys = 'WERTYUIOPASDFGHJKLÇZXCVBNM'.split('').map(letter => `
+  const keys = 'WERTYUIOPASDFGHJKLZXCVBNM'.split('').map(letter => `
   <button
     class="btn-keyboard"
     id="${letter}"
