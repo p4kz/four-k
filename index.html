@@ -21,7 +21,6 @@
             <button class="btn-start" onclick="startGame()">Comece a jogar</button>
             <button class="btn-addword" onclick="addWord()">Adicionar palavra</button>
           </div>
-
           <div class="menu-addword-box">
             <div class="addword-header-box">
               <div class="add-word-resp">
@@ -58,11 +57,16 @@
           <img class="image" src="./src/img/try0.svg" alt="Forca + Boneco de palito">
         </div>                
         <div class="result-box">
-          <p class="secret-word">secret</p>
+          <p class="info-response">A palavra era: </p>
+          <p class="secret-word">
+            secret
+          </p>
         </div>
         <div class="control-box">
-          <p>Escolha uma letra para começar jogar</p>
-          <div class="keyboard-box"></div>
+          <p class="info-control">Escolha uma letra para começar jogar</p>
+          <div class="keyboard-box">
+            <div class="response"></div>
+          </div>
           <p class="score-box">Tentativas: <span class="attempts">0</span> / <span class="max-attempts"></span></p>
           <div class="buttons-box">
             <button class="btn-reset" onclick="reset()">Novo jogo</button>

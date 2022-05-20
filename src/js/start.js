@@ -63,7 +63,7 @@ addWordInfoBox.addEventListener('dblclick', () => {
 function addNewWord() {
   let invalid = (
     '0123456789ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêë`^~;:?>'+
-    '<,ìíîïðñòóôõöøùúûüýþÿŕ(?@!#$%&()?.*[]?=@!#$%&*$/.-_=¨¨$%@!|'
+    `<,ìíîïðñòóôõöøùúûüýþÿŕ(?@!#$%&()?.ç*[]?=@!#$%&*$/.'"-_=¨¨$%@!|`
   )
 
   let isValidText = false
@@ -82,7 +82,8 @@ function addNewWord() {
   if (textUser != '' && isValidText === false && textUser.length > 3 && textUser.length <= 8) {
     wordData.push(textUser)
     success.innerHTML = 'Palavra adicionada'
-
+    textUserData.value = ''
+    
     setTimeout(() => {
       success.innerHTML = ''
     }, 4000)

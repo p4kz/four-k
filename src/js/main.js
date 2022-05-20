@@ -1,11 +1,13 @@
 const wordData = [
-  'gato', 
+  'gato', 'cachorro', 'capivara'
 ]
-// 'cachorro', 'capivara'
 
 const keyboard = document.querySelector('.keyboard-box')
 const secretWord = document.querySelector('.secret-word')
 const image = document.querySelector('.image')
+const response = document.querySelector('.response')
+const infoResponse = document.querySelector('.info-response')
+const infoControl = document.querySelector('.info-control')
 
 let answer = ''
 let maxAttempts = 6
@@ -66,14 +68,17 @@ function updateAttempts() {
 
 function youWon() {
   if(wordStatus === answer) {
-    keyboard.innerHTML = 'Você ganhou'
+    keyboard.innerHTML = `<p class="response">Você venceu<p>`
+    show(infoControl, 'none')
   }
 }
 
 function youLost() {
   if(attempts === maxAttempts) {
-    secretWord.innerHTML = `A palavra era: ${answer}`
-    keyboard.innerHTML = 'Você perdeu'
+    show(infoResponse, '1')
+    secretWord.innerHTML = `${answer}`
+    keyboard.innerHTML = `<p class="response">Você perdeu<p>`
+    show(infoControl, 'none')
   }
 }
 
@@ -81,7 +86,10 @@ function reset() {
   attempts = 0
   guessed = []
   image.src = "./src/img/try0.svg"
+  response.innerHTML = '' 
 
+  show(infoControl, 'initial')
+  show(infoResponse, '0')
   randomWord()
   guessedWord()
   updateAttempts()
