@@ -1,8 +1,10 @@
 const startBox = document.querySelector('#start-box')
 const gameBox = document.querySelector('#game-box')
 const addWordBox = document.querySelector('.menu-addword-box')
-const textUser = document.querySelector('.text-user').value
+const textUserData = document.querySelector('.text-user')
 const addWordInfoBox = document.querySelector('.addword-info-box')
+const success = document.querySelector('.success')
+const cancel = document.querySelector('.cancel')
 
 function show(tag, onOff) { 
   if (onOff === 'none' || onOff === 'initial') {
@@ -55,3 +57,40 @@ addWordInfoBox.addEventListener('dblclick', () => {
   show(addWordInfoBox, 'none')
   disabled('.btn-info-input', false)
 })
+
+
+
+function addNewWord() {
+  let invalid = (
+    '0123456789ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêë`^~;:?>'+
+    '<,ìíîïðñòóôõöøùúûüýþÿŕ(?@!#$%&()?.*[]?=@!#$%&*$/.-_=¨¨$%@!|'
+  )
+
+  let isValidText = false
+  let textUser = textUserData.value
+  cancel.innerHTML = ''
+  success.innerHTML = ''
+
+  for (let x = 0; x < textUser.length; x++) {
+    for (let i = 0; i < invalid.length; i++) {
+      if (textUser[x] === invalid[i]) {
+        isValidText = true
+      }
+    }
+  }
+  
+  if (textUser != '' && isValidText === false && textUser.length > 3 && textUser.length <= 8) {
+    wordData.push(textUser)
+    success.innerHTML = 'Palavra adicionada'
+
+    setTimeout(() => {
+      success.innerHTML = ''
+    }, 4000)
+  } else {
+    cancel.innerHTML = 'Palavra invalida'
+
+    setTimeout(() => {
+      cancel.innerHTML = ''
+    }, 4000)
+  }
+}

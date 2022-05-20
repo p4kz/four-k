@@ -1,6 +1,7 @@
 const wordData = [
-  'gato', 'cachorro', 'capivara'
+  'gato', 
 ]
+// 'cachorro', 'capivara'
 
 const keyboard = document.querySelector('.keyboard-box')
 const secretWord = document.querySelector('.secret-word')
@@ -85,6 +86,10 @@ function reset() {
   guessedWord()
   updateAttempts()
   generateButtons()
+}
+
+function surrender() {
+  window.location.reload()
 }
 
 document.querySelector('.max-attempts').innerHTML = maxAttempts
