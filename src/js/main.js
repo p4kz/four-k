@@ -1,5 +1,6 @@
 const wordData = [
-  'gato', 'cachorro', 'capivara'
+  'gato', 'cachorro', 'capivara', 'galinha', 'Arroz', 'flores', 'raiz', 'amarelo', 'teclado', 'desafio', 'oracle', 'alura' , 'programaone',  
+  'MACACO', 'GIRAFA', 'CAVALO', 'CACHORRO', 'GALINHA', 'TUCANO', 'CROCODILO', 'PAPAGAIO', 'AVESTRUZ', 'RAPOSA', 'TIGRE', 'COBRA', 'GORILA'
 ]
 
 const keyboard = document.querySelector('.keyboard-box')
@@ -18,7 +19,6 @@ let wordStatus = null
 function randomWord() {
   answer = wordData[Math.floor(Math.random() * wordData.length)]
   answer = answer.toUpperCase() 
-  console.log(answer)
 }
 
 function generateButtons() {

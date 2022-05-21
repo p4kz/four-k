@@ -35,6 +35,10 @@
   height: 3rem;
 }
 
+.button-start-box button:hover {
+  transform: scale(1.02);
+}
+
 .btn-start {
   border: 0;
   margin-bottom: .5rem;
