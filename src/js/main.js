@@ -22,17 +22,22 @@ function randomWord() {
 }
 
 function generateButtons() {
-  const keys = 'WERTYUIOPASDFGHJKLZXCVBNM'.split('').map(letter => `
-  <button
+  const keys = `QWERTYUIOPASDFGHJKLZX1CVBNM2`.split('').map(letter => `
+    <button
     class="btn-keyboard"
     id="${letter}"
     onClick="handleGuess('${letter}')"
-  >
+    >
     ${letter}
-  </button>
+    </button>
   `).join('')
   
   keyboard.innerHTML = keys
+
+  document.getElementById('1').style.opacity = 0
+  document.getElementById('2').style.opacity = 0
+  document.getElementById('1').setAttribute('disabled', false)
+  document.getElementById('2').setAttribute('disabled', false)
 }
 
 function handleGuess(chosenLetter) {

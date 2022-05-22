@@ -41,7 +41,7 @@
 .keyboard-box {
   display: grid;
   position: relative;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto;
   gap: 4px;
   padding: 0.4rem;
   width: 100%;
