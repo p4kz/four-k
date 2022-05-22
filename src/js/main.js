@@ -1,3 +1,4 @@
+
 const wordData = [
   'gato', 'cachorro', 'capivara', 'galinha', 'Arroz', 'flores', 'raiz', 'amarelo', 'teclado', 'desafio', 'oracle', 'alura' , 'programaone',  
   'MACACO', 'GIRAFA', 'CAVALO', 'CACHORRO', 'GALINHA', 'TUCANO', 'CROCODILO', 'PAPAGAIO', 'AVESTRUZ', 'RAPOSA', 'TIGRE', 'COBRA', 'GORILA'
@@ -10,6 +11,8 @@ const response = document.querySelector('.response')
 const infoResponse = document.querySelector('.info-response')
 const infoControl = document.querySelector('.info-control')
 
+let userRandomMode = Math.floor((Math.random() * 5) + 1)
+let userHardMode = 3
 let answer = ''
 let maxAttempts = 6
 let attempts = 0

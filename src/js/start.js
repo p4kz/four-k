@@ -1,10 +1,15 @@
 const startBox = document.querySelector('#start-box')
 const gameBox = document.querySelector('#game-box')
+const gameBoxDiv = document.querySelector('.game-box-event')
 const addWordBox = document.querySelector('.menu-addword-box')
 const textUserData = document.querySelector('.text-user')
 const addWordInfoBox = document.querySelector('.addword-info-box')
 const success = document.querySelector('.success')
 const cancel = document.querySelector('.cancel')
+const modeBox = document.querySelector('.dificult') 
+const modeBoxButton = document.querySelector('.dificult div') 
+const maxAttemptsSpan = document.querySelector('.max-attempts')
+const btnStart = document.querySelector('.btn-start-event')
 
 function show(tag, onOff) { 
   if (onOff === 'none' || onOff === 'initial') {
@@ -26,14 +31,68 @@ function disabled(tag, onOff) {
   }
 }
 
+function eventAnimation(tag, opacity) {
+  setTimeout(() => {
+    show(tag, opacity)
+  }, 200) 
+}
+
 function startGame() {
+  show(modeBox, 'initial')
+  eventAnimation(modeBoxButton, '1')
+  disabled('.btn-start', true)
+}
+
+btnStart.addEventListener('dblclick', () => {
+  show(modeBox, 'none')
+  show(modeBoxButton, '0')
+  disabled('.btn-start', false)
+})
+
+function getHardMode() {
   show(startBox, 'none')
   show(gameBox, 'initial')
+  eventAnimation(gameBoxDiv, '1')
+
+  maxAttempts = userHardMode
 
   exitAddWord()
   randomWord()
   generateButtons()
   guessedWord()
+  show(modeBox, 'none')
+
+  maxAttemptsSpan.innerHTML = maxAttempts
+}
+
+function getNormalMode() {
+  show(startBox, 'none')
+  show(gameBox, 'initial')
+  eventAnimation(gameBoxDiv, '1')
+
+  exitAddWord()
+  randomWord()
+  generateButtons()
+  guessedWord()
+  show(modeBox, 'none')
+
+  maxAttemptsSpan.innerHTML = maxAttempts
+}
+
+function getRandomMode() {
+  show(startBox, 'none')
+  show(gameBox, 'initial')
+  eventAnimation(gameBoxDiv, '1')
+
+  maxAttempts = userRandomMode
+
+  exitAddWord()
+  randomWord()
+  generateButtons()
+  guessedWord()
+  show(modeBox, 'none')
+
+  maxAttemptsSpan.innerHTML = maxAttempts
 }
 
 function addWord() {

@@ -26,7 +26,16 @@
       <div id="start-box">
         <div class="menu-start-box">
           <div class="button-start-box">
-            <button class="btn-start" onclick="startGame()">Começar a jogar</button>
+            <div class="btn-start-event">
+              <button class="btn-start" onclick="startGame()">Começar a jogar</button>
+              <div class="dificult">
+                <div>
+                  <button class="random-mode" onclick="getRandomMode()">Random</button>
+                  <button class="normal-mode" onclick="getNormalMode()">Normal</button>
+                  <button class="hard-mode" onclick="getHardMode()">Hard</button>
+                </div>
+              </div>
+            </div>
             <button class="btn-addword" onclick="addWord()">Adicionar palavra</button>
           </div>
           <div class="menu-addword-box">
@@ -59,30 +68,30 @@
         </div>
       </div> 
       <div id="game-box">
-        <div class="image-box">
-          <img class="image" src="./src/assets/img/try0.svg" alt="Forca + Boneco de palito">
-        </div>                
-        <div class="result-box">
-          <p class="info-response">A palavra era: </p>
-          <p class="secret-word">
-            secret
-          </p>
-        </div>
-        <div class="control-box">
-          <p class="info-control">Escolha uma letra para começar jogar</p>
-          <div class="keyboard-box">
-            <div class="response"></div>
+        <div class="game-box-event">
+          <div class="image-box">
+            <img class="image" src="./src/assets/img/try0.svg" alt="Forca + Boneco de palito">
+          </div>                
+          <div class="result-box">
+            <p class="info-response">A palavra era: </p>
+            <p class="secret-word"></p>
           </div>
-          <p class="score-box">Tentativas: <span class="attempts">0</span> / <span class="max-attempts"></span></p>
-          <div class="buttons-box">
-            <button class="btn-reset" onclick="reset()">Novo jogo</button>
-            <button class="btn-surrender" onclick="surrender()">Desistir</button>
-          </div>
-        </div>       
-      </div>    
-      <div class="link">
-        <p>Com 💜</p><a href="https://github.com/p4kz" target="_blank">p4kz</a>
-      </div> 
+          <div class="control-box">
+            <p class="info-control">Escolha uma letra para começar jogar</p>
+            <div class="keyboard-box">
+              <div class="response"></div>
+            </div>
+            <p class="score-box">Tentativas: <span class="attempts">0</span> / <span class="max-attempts"></span></p>
+            <div class="buttons-box">
+              <button class="btn-reset" onclick="reset()">Novo jogo</button>
+              <button class="btn-surrender" onclick="surrender()">Desistir</button>
+            </div>
+          </div>       
+          <div class="link">
+            <p>Com 💜</p><a href="https://github.com/p4kz" target="_blank">p4kz</a>
+          </div> 
+        </div>    
+      </div>
     </div>
     <script src="./src/js/dark.js"></script>
     <script src="./src/js/start.js"></script>

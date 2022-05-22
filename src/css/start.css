@@ -35,8 +35,10 @@
   height: 3rem;
 }
 
-.button-start-box button:hover {
-  transform: scale(1.02);
+.btn-start-event {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .btn-start {
@@ -46,11 +48,50 @@
   background: var(--blue);
 }
 
+.dificult {
+  display: none;
+}
+
+.dificult div {
+  opacity: 0;
+  transition: 500ms;
+}
+
+.dificult button {
+  border-radius: .5rem;
+  width: 95px;
+  height: 30px;
+  margin: 1.5px;
+  margin-bottom: 0.5rem;
+  border: none;
+  color: #e5e5e5;
+}
+
+.random-mode {
+  background: #8257e5;
+}
+
+.normal-mode {
+  background: #0A3871;
+}
+
+.hard-mode {
+  background: #6b1010;
+}
+
+.hard-mode:hover, .normal-mode:hover, .random-mode:hover {
+  filter: brightness(2)
+}
+
 .btn-addword {
   background: var(--bg);
   border: solid 1px var(--border-primary);
   color: var(--font-primary);
   margin-bottom: .5rem;
+}
+
+.btn-start:hover, .btn-addword:hover {
+  transform: scale(1.02);
 }
 
 .menu-addword-box {

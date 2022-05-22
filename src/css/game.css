@@ -5,6 +5,11 @@
   color: var(--font-primary);
 }
 
+.game-box-event {
+  opacity: 0;
+  transition: 500ms;
+}
+
 .image-box {
   display: flex;
   justify-content: center;
