@@ -5,3 +5,9 @@
   }
 }
 
+@media (max-width: 315px) {
+  .dificult button {
+    min-width: 100%;
+    min-height: 40px;
+  }
+}

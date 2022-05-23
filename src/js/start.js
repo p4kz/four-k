@@ -10,6 +10,8 @@ const modeBox = document.querySelector('.dificult')
 const modeBoxButton = document.querySelector('.dificult div') 
 const maxAttemptsSpan = document.querySelector('.max-attempts')
 const btnStart = document.querySelector('.btn-start-event')
+const addWordUlEvent = document.querySelector('.addword-info-box ul')
+
 
 function show(tag, onOff) { 
   if (onOff === 'none' || onOff === 'initial') {
@@ -96,25 +98,30 @@ function getRandomMode() {
 }
 
 function addWord() {
-  show(addWordBox, '1')
+  show(addWordBox, 'initial')
+  eventAnimation(addWordBox, '1')
   disabled('.btn-addword', true)
 }
 
 function exitAddWord() {
   show(addWordBox, '0')
+  show(addWordBox, 'none')
   disabled('.btn-addword', false)
   disabled('.btn-info-input', false)
   setTimeout(() => show(addWordInfoBox, 'none'), 300)  
+  eventAnimation(addWordUlEvent, '0')
 }
 
 function infoAddWord() {
   addWordInfoBox.style.display = 'inherit'
   disabled('.btn-info-input', true)
+  eventAnimation(addWordUlEvent, '1')
 }
 
 addWordInfoBox.addEventListener('dblclick', () => {
   show(addWordInfoBox, 'none')
   disabled('.btn-info-input', false)
+  eventAnimation(addWordUlEvent, '0')
 })
 
 function addNewWord() {

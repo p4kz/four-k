@@ -73,7 +73,7 @@ header h1, h1 a {
 
 button {
   cursor: pointer;
-  transition: 300ms;
+  transition: 500ms;
 }
 
 button:disabled {

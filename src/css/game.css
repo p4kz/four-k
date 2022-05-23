@@ -64,6 +64,15 @@
   color: var(--font-primary);
 }
 
+body.dark .btn-keyboard:hover {
+  border-color: #fff;
+}
+
+body.light .btn-keyboard:hover {
+  color: #000;
+  border-color: #000;
+}
+
 .response {
   position: absolute;
   top: 0px;
@@ -97,7 +106,7 @@
 }
 
 .buttons-box button:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .btn-reset {
