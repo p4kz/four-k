@@ -76,7 +76,7 @@
 }
 
 .hard-mode {
-  background: #6b1010;
+  background: var(--red);
 }
 
 .hard-mode:hover, .normal-mode:hover, .random-mode:hover {
