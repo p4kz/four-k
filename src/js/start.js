@@ -125,25 +125,16 @@ addWordInfoBox.addEventListener('dblclick', () => {
 })
 
 function addNewWord() {
-  let invalid = (
-    '0123456789ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝŔÞßàáâãäåæçèéêë`^~;:?>'+
-    `<,ìíîïðñòóôõöøùúûüýþÿŕ(?@!#$%&()?.ç*[]?=@!#$%&*$/.'"-_=¨¨$%@!|`
-  )
+  const regexp = /[^a-zA-Z]/g
 
   let isValidText = false
   let textUser = textUserData.value
   cancel.innerHTML = ''
   success.innerHTML = ''
 
-  for (let x = 0; x < textUser.length; x++) {
-    for (let i = 0; i < invalid.length; i++) {
-      if (textUser[x] === invalid[i]) {
-        isValidText = true
-      }
-    }
-  }
+  if (regexp.test(textUser) === false) isValidText = true
   
-  if (textUser != '' && isValidText === false && textUser.length > 3 && textUser.length <= 8) {
+  if (textUser != '' && isValidText === true && textUser.length > 3 && textUser.length <= 8) {
     wordData.push(textUser)
     success.innerHTML = 'Palavra adicionada'
     textUserData.value = ''
