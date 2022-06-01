@@ -36,7 +36,7 @@
 <p>To run this project, make sure you have <a href="https://nodejs.org/en/download/">Node.js</a> installed on your computer.</p>
 <p>Clone the repo:</p>
 
-`git@github.com:p4kz/four-k.git`
+`https://github.com/p4kz/four-k.git`
 
 <p id="execute">
     After entering the project directory just open:
