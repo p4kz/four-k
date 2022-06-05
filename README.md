@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/KfFNgoZ.png">
+  <img src="https://i.imgur.com/HElqPc0.png?1">
 </p>
 
 ## :pushpin: About
