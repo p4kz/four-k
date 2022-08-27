@@ -47,22 +47,6 @@ body {
   background: var(--bg);
 }
 
-header {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  position: relative;
-  margin-right: 15px;
-  min-width: 100px;
-  height: 3rem;
-}
-
-header h1, h1 a {
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-family: 'Smooch', cursive;
-  color: var(--font-secundary);
-}
 
 button {
   cursor: pointer;
@@ -88,45 +72,20 @@ button:hover {
   filter: brightness(1.6)
 }
 
-#container {
+.container {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  min-width: 280px;
+}
+
+.wrap {
+
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+#containerDeprecad {
   position: relative;
   height: 94vh;
   overflow: none;
-}
-
-#darkmode-button {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border-radius: 1rem;
-  padding: .3rem;
-  border: solid 1px var(--font-secundary);
-  color: var(--font-secundary);
-  background: var(--bg);
-}
-
-#darkmode-button img {
-  width: 20px;
-}
-
-body.light .reload-normal {
-  display: initial;
-}
-
-body.light .reload-correct {
-  display: none;
-}
-
-body.light .reload-normal-sun {
-  display: none;
-}
-
-body.dark .reload-correct {
-  display: none;
-}
-
-body.dark .reload-normal {
-  display: none;
 }

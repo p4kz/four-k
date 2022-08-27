@@ -10,19 +10,20 @@
     <link rel="stylesheet" href="./src/css/media-query.css">
     <link rel="stylesheet" href="./src/css/start.css">
     <link rel="stylesheet" href="./src/css/game.css">
-    <link rel="stylesheet" href="./src/css/global.css"> 
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="stylesheet" href="./src/css/components/header.css">
     <title>4K</title>
   </head>
-  <body>
-    <header>
-      <h1><a href="https://github.com/p4kz/four-k" target="_blank">4K</a></h1>
-      <button onclick='toggleMode()' id='darkmode-button' class="mode-button">
-        <img class="reload-normal" src="./src/assets/icon/moon-light.svg" alt="Imagem lua">
-        <img class="reload-normal-sun" src="./src/assets/icon/sun-dim-light.svg" alt="Imagem sol">
-        <img class="reload-correct"src="./src/assets/icon/moon-light-d.svg" alt="Imagem lua">
+  <body class="container">
+    <header class="header wrap">
+      <button class="header__darkmode-button" data-dark-mode>
+        <img class="header__darkmode-image--normal" src="./src/assets/icon/moon-light.svg" />
+        <img class="header__darkmode-image--sun" src="./src/assets/icon/sun-dim-light.svg" />
+        <img class="header__darkmode-image--moon"src="./src/assets/icon/moon-light-d.svg" />
       </button>
+      <a class="header__link" href="https://github.com/p4kz/four-k" target="_blank">p4k</a>
     </header>
-    <div id="container">
+    <div id="containerDeprecad">
       <div id="start-box">
         <div class="menu-start-box">
           <div class="button-start-box">
@@ -93,8 +94,9 @@
         </div>    
       </div>
     </div>
-    <script src="./src/js/dark.js"></script>
+    <!-- <script src="./src/js/dark.js"></script> -->
     <script src="./src/js/start.js"></script>
-    <script src="./src/js/main.js"></script>
+    <script src="./src/js/game.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
