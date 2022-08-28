@@ -47,6 +47,11 @@ body {
   background: var(--bg);
 }
 
+main {
+  position: relative;
+  height: 94vh;
+  overflow: none;
+}
 
 button {
   cursor: pointer;
@@ -84,8 +89,11 @@ button:hover {
   margin: 0 auto;
 }
 
-#containerDeprecad {
-  position: relative;
-  height: 94vh;
-  overflow: none;
+.hide {
+  display: none;
+}
+
+.event {
+  opacity: 0;
+  transition: 500ms;
 }

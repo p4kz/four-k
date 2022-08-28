@@ -7,11 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Smooch&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./src/css/media-query.css">
-    <link rel="stylesheet" href="./src/css/start.css">
-    <link rel="stylesheet" href="./src/css/game.css">
-    <link rel="stylesheet" href="./src/css/global.css">
-    <link rel="stylesheet" href="./src/css/components/header.css">
+    <link rel="stylesheet" href="./src/styles/media-query.css">
+    <link rel="stylesheet" href="./src/styles/startdeprecad.css">
+    <link rel="stylesheet" href="./src/styles/game.css">
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/start/start.css">
+    <link rel="stylesheet" href="./src/styles/start/menu-start.css">
     <title>4K</title>
   </head>
   <body class="container">
@@ -23,22 +25,28 @@
       </button>
       <a class="header__link" href="https://github.com/p4kz/four-k" target="_blank">p4k</a>
     </header>
-    <div id="containerDeprecad">
-      <div id="start-box">
-        <div class="menu-start-box">
-          <div class="button-start-box">
-            <div class="btn-start-event">
-              <button class="btn-start" onclick="startGame()">Começar a jogar</button>
-              <div class="dificult">
-                <div>
-                  <button class="random-mode" onclick="getRandomMode()">Random</button>
-                  <button class="normal-mode" onclick="getNormalMode()">Normal</button>
-                  <button class="hard-mode" onclick="getHardMode()">Hard</button>
+    <main>
+
+      <div class="start">
+        <div class="start-box">
+
+
+          <div class="menu-start">
+            <div class="menu-start-box" data-start-event>
+              <button class="menu-start-box__button--start" data-button-start>Começar a jogar</button>              
+              <div class="menu-start-box__dificult hide" data-mode-box>
+                <div class="menu-start-box__dificult--box event" data-mode-event>
+                  <button class="menu-start-box__dificult--btn-random"  data-mode="random" onclick="getRandomMode()">Random</button>
+                  <button class="menu-start-box__dificult--btn-normal" data-mode="normal" onclick="getNormalMode()">Normal</button>
+                  <button class="menu-start-box__dificult--btn-hard"  data-mode="hard" onclick="getHardMode()">Hard</button>
                 </div>
               </div>
             </div>
-            <button class="btn-addword" onclick="addWord()">Adicionar palavra</button>
+            <button class="menu-start__button--addword" onclick="addWord()">Adicionar palavra</button>
           </div>
+
+
+
           <div class="menu-addword-box">
             <div class="addword-header-box">
               <div class="add-word-resp">
@@ -66,8 +74,13 @@
               <button class="btn-save-word" onclick="addNewWord()">Salvar</button>
             </div>
           </div>
+
+
+
         </div>
       </div> 
+
+
       <div id="game-box">
         <div class="game-box-event">
           <div class="image-box">
@@ -93,10 +106,10 @@
           </div> 
         </div>    
       </div>
-    </div>
+    </main>
     <!-- <script src="./src/js/dark.js"></script> -->
     <script src="./src/js/start.js"></script>
-    <script src="./src/js/game.js"></script>
+    <script src="./src/js/gameRework.js"></script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
