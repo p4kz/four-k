@@ -1,16 +1,5 @@
 
-.btn-addword {
-  background: var(--bg);
-  border: solid 1px var(--border-primary);
-  color: var(--font-primary);
-  margin-bottom: .5rem;
-}
-
-.btn-start:hover, .btn-addword:hover {
-  transform: scale(1.01);
-}
-
-.menu-addword-box {
+.menu-word {
   display: none;
   opacity: 0;
   border-radius: 1rem;
@@ -21,55 +10,53 @@
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.2);
 }
 
-.btn-info-input, .btn-exit-addword {
-  border-radius: 1rem;
-}
-
-.addword-header-box {
+.menu-word__header {
   display: flex;
   flex-direction: row;
 }
 
-.add-word-resp {
+.menu-word__header--response-box {
   padding: .5px 0 .5px .9rem;
   font-size: .8rem;
   height: 15px;
   width: 100%;
 }
 
-.success {
+.menu-word__header--success {
   color: var(--green);
 }
 
-.cancel {
+.menu-word__header--invalid {
   color: var(--red);
 }
 
-.add-word-actions {
+.menu-word__header--action-box {
   display: flex;
   justify-content: end;
   width: 50%;
   margin: 0  0 5px 0;
 }
 
-.btn-info-input {
+.menu-word__header--button-info {
   height: 20px;
   width: 40px;
   color: var(--font-primary);
+  border-radius: 1rem;
   border: solid 1px var(--border-primary);
   background: var(--bg);
 }
 
-.btn-exit-addword {
+.menu-word__header--button-exit {
   height: 20px;
   width: 20px;
   margin-left: 5px;
   color: var(--red);
   border: solid 1px var(--red);
   background: var(--bg);
+  border-radius: 1rem;
 }
 
-.text-user {
+.menu-word__input {
   padding: 1rem;
   width: 100%;
   height: 3rem;
@@ -80,12 +67,12 @@
   border: solid 1px var(--border-primary);
 }
 
-input:focus {
+.menu-word__input:focus {
   border: 2px solid #8257e5;
   transition: 100ms;
 }
 
-.addword-info-box {
+.menu-word__info {
   display: none;
   padding: .5rem 1rem .5rem 1rem;
   border: 1px solid var(--border-primary);
@@ -94,36 +81,36 @@ input:focus {
   background: var(--bg-secundary);
 }
 
-.addword-info-box h4 {
-  font-size: .8rem;
-  color: var(--black);
-  margin-bottom: .2rem;
-}
-
-.addword-info-box ul {
+.menu-word__info--list {
   opacity: 0;
   padding-left: 1rem;
   color: var(--font-primary);
   transition: 500ms;
 }
 
-.addword-info-box li {
+.menu-word__info--title {
+  font-size: .8rem;
+  color: var(--black);
+  margin-bottom: .2rem;
+}
+
+.menu-word__info--item {
   font-size: .9rem;
 }
 
-.addword-info-box p {
+.menu-word__info--click {
   margin-top: .5rem;
   color: var(--font-secundary);
   text-align: center;
 }
 
-.button-addword-box {
+.menu-word__button-box {
   display: flex;
   flex-direction: row;
   height: 3rem;
 }
 
-.btn-save-word {
+.menu-word__button-box--save-word {
   border: 0;
   width: 100%;
   border-radius: 0 0 1rem 1rem;

@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="./src/styles/media-query.css">
     <link rel="stylesheet" href="./src/styles/startdeprecad.css">
     <link rel="stylesheet" href="./src/styles/game.css">
+    <title>4K</title>
     <link rel="stylesheet" href="./src/styles/global.css">
     <link rel="stylesheet" href="./src/styles/header.css">
     <link rel="stylesheet" href="./src/styles/start/start.css">
     <link rel="stylesheet" href="./src/styles/start/menu-start.css">
-    <title>4K</title>
+    <link rel="stylesheet" href="./src/styles/start/menu-word.css">
   </head>
   <body class="container">
     <header class="header wrap">
@@ -26,63 +27,53 @@
       <a class="header__link" href="https://github.com/p4kz/four-k" target="_blank">p4k</a>
     </header>
     <main>
-
-      <div class="start">
+      <div class="start" data-start>
         <div class="start-box">
-
-
           <div class="menu-start">
-            <div class="menu-start-box" data-start-event>
-              <button class="menu-start-box__button--start" data-button-start>Começar a jogar</button>              
+            <div class="menu-start-box" data-button="close-event-start-game">
+              <button class="menu-start-box__button--start" data-button="start-game">Começar a jogar</button>              
               <div class="menu-start-box__dificult hide" data-mode-box>
                 <div class="menu-start-box__dificult--box event" data-mode-event>
-                  <button class="menu-start-box__dificult--btn-random"  data-mode="random" onclick="getRandomMode()">Random</button>
-                  <button class="menu-start-box__dificult--btn-normal" data-mode="normal" onclick="getNormalMode()">Normal</button>
-                  <button class="menu-start-box__dificult--btn-hard"  data-mode="hard" onclick="getHardMode()">Hard</button>
+                  <button class="menu-start-box__dificult--btn-random"  data-button="random-mode">Random</button>
+                  <button class="menu-start-box__dificult--btn-normal" data-button="normal-mode">Normal</button>
+                  <button class="menu-start-box__dificult--btn-hard"  data-button="hard-mode">Hard</button>
                 </div>
               </div>
             </div>
-            <button class="menu-start__button--addword" onclick="addWord()">Adicionar palavra</button>
+            <button class="menu-start__button--addword" data-button="add-new-word">Adicionar palavra</button>
           </div>
-
-
-
-          <div class="menu-addword-box">
-            <div class="addword-header-box">
-              <div class="add-word-resp">
-                <p class="success"></p>
-                <p class="cancel"></p>
+          <div class="menu-word" data-menu-word>
+            <div class="menu-word__header">             
+              <div class="menu-word__header--response-box">
+                <p class="menu-word__header--success" data-resp="success"></p>
+                <p class="menu-word__header--invalid" data-resp="invalid"></p>
               </div>
-              <div class="add-word-actions">
-                <button class="btn-info-input" onclick="infoAddWord()">info</button>
-                <button class="btn-exit-addword" onclick="exitAddWord()">X</button>
+              <div class="menu-word__header--action-box">
+                <button class="menu-word__header--button-info" data-button="info">info</button>
+                <button class="menu-word__header--button-exit" data-button="exit">X</button>
               </div>
             </div>
-            <input class="text-user" type="text" placeholder="digite a palavra aqui...">
-            <div class="addword-info-box">
-              <ul>
-                <h4><strong>A palavra tem que ser :</strong></h4>
-                <li>Menor que 8 letras</li>
-                <li>Maior que 3 letras</li>
-                <li>Sem acentos</li>
-                <li>Sem numeros</li>
-                <li>Sem simbolos</li>
+            <input class="menu-word__input" type="text" placeholder="digite a palavra aqui..." data-text="user-word">        
+            <div class="menu-word__info" data-menu-info data-button="close-event-info">
+              <ul class="menu-word__info--list" data-menu-info="list">
+                <h4 class="menu-word__info--title"><strong>A palavra tem que ser :</strong></h4>
+                <li class="menu-word__info--item">Menor que 8 letras</li>
+                <li class="menu-word__info--item">Maior que 3 letras</li>
+                <li class="menu-word__info--item">Sem acentos</li>
+                <li class="menu-word__info--item">Sem numeros</li>
+                <li class="menu-word__info--item">Sem simbolos</li>
               </ul>
-              <p>Click duas vezes para fechar</p>
+              <p class="menu-word__info--click">Click para fechar</p>
             </div>
-            <div class="button-addword-box">
-              <button class="btn-save-word" onclick="addNewWord()">Salvar</button>
+            <div class="menu-word__button-box">
+              <button class="menu-word__button-box--save-word" data-button="save-new-word">Salvar</button>
             </div>
           </div>
-
-
-
         </div>
       </div> 
 
-
-      <div id="game-box">
-        <div class="game-box-event">
+      <div id="game-box" data-game>
+        <div class="game-box-event" data-game="event">
           <div class="image-box">
             <img class="image" src="./src/assets/img/try0.svg" alt="Forca + Boneco de palito">
           </div>                
@@ -95,7 +86,7 @@
             <div class="keyboard-box">
               <div class="response"></div>
             </div>
-            <p class="score-box">Tentativas: <span class="attempts">0</span> / <span class="max-attempts"></span></p>
+            <p class="score-box">Tentativas: <span class="attempts">0</span> / <span class="max-attempts" data-attempts></span></p>
             <div class="buttons-box">
               <button class="btn-reset" onclick="reset()">Novo jogo</button>
               <button class="btn-surrender" onclick="surrender()">Desistir</button>
@@ -107,7 +98,6 @@
         </div>    
       </div>
     </main>
-    <!-- <script src="./src/js/dark.js"></script> -->
     <script src="./src/js/start.js"></script>
     <script src="./src/js/gameRework.js"></script>
     <script type="module" src="./src/js/main.js"></script>

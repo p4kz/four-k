@@ -1,41 +1,32 @@
 import { toggleMode } from "./module/darkmode.js"
-import { style } from "./module/style.js";
+import { getGameMode } from "./module/getGameMode.js";
+import { getStartMenuEvents } from "./module/getStartMenuEvents.js";
 
 // Darkmode -
 const buttonDarkMode = document.querySelector('[data-dark-mode]');
 
 buttonDarkMode.addEventListener('click', () => toggleMode());
 
-// Start -
-const buttonStartGame = document.querySelector('[data-button-start]');
+// mudar o nome <-----------------------
+const startButtonsEvents = document.querySelector('[data-start]');
 
-// Open menu
-buttonStartGame.addEventListener('click', () => {
-  style.display('[data-mode-box]', 'block');
-  style.animation('[data-mode-event]', '1');
-  style.disabled('[data-button-start]' , true);
-});
+startButtonsEvents.addEventListener('click', (e) => {
+  const scanButton = e.target.dataset.button; 
 
-// Event to close menu 
-document.querySelector('[data-start-event]').addEventListener('dblclick', () => {
-  style.display('[data-mode-box]', 'none');
-  style.animation('[data-mode-event]', '0');
-  style.disabled('[data-button-start]' , false);
-});
+  if (scanButton === 'start-game') getStartMenuEvents(scanButton);
+  if (scanButton === 'add-new-word') getStartMenuEvents(scanButton);
+  if (scanButton === 'close-event-start-game') getStartMenuEvents(scanButton);
+  if (scanButton === 'info') getStartMenuEvents(scanButton);
+  if (scanButton === 'exit') getStartMenuEvents(scanButton);
+  if (scanButton === 'close-event-info') getStartMenuEvents(scanButton);
+  if (scanButton === 'save-new-word') getStartMenuEvents(scanButton);
 
-// Select game mode
-const gameModeSelect = document.querySelector('[data-mode-event]');
+})
 
-gameModeSelect.addEventListener('click', (e) => {
-  if (e.target.dataset.mode == "random") {
-    console.log("random mode ok");
-  }
+startButtonsEvents.addEventListener('click', (e) => {
+  const scanButton = e.target.dataset.button; 
 
-  if (e.target.dataset.mode == "normal") {
-    console.log("normal mode ok");
-  }
-
-  if (e.target.dataset.mode == "hard") {
-    console.log("hard mode ok");
-  }
-});
+  if (scanButton === 'random-mode') getGameMode(scanButton);
+  if (scanButton === 'normal-mode') getGameMode(scanButton);
+  if (scanButton === 'hard-mode') getGameMode(scanButton);
+})
