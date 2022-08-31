@@ -27,21 +27,20 @@ const newGameConfig = () => {
 }
 
 export const getGameMode = (e) => {
-
   if (e === 'random-mode') {
     maxAttempts = Math.floor((Math.random() * 5) + 1);
     document.querySelector('[data-attempts]').innerHTML = maxAttempts;
-    newGameConfig()
+    newGameConfig();
   }
 
   if (e === 'normal-mode') {
-    newGameConfig()
+    newGameConfig();
   }
 
   if (e === 'hard-mode') {
     maxAttempts = 3;
     document.querySelector('[data-attempts]').innerHTML = maxAttempts;
-    newGameConfig()
+    newGameConfig();
   }
 
 }

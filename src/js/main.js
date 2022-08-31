@@ -1,32 +1,21 @@
-import { toggleMode } from "./module/darkmode.js"
+import { toggleMode } from "./module/darkmode.js";
 import { getGameMode } from "./module/getGameMode.js";
 import { getStartMenuEvents } from "./module/getStartMenuEvents.js";
 
-// Darkmode -
-const buttonDarkMode = document.querySelector('[data-dark-mode]');
+const dataApp = document.querySelector('[data-app]'); 
 
-buttonDarkMode.addEventListener('click', () => toggleMode());
+dataApp.addEventListener('click', (e) => {
+  const scannerButton = e.target.dataset.button; 
 
-// mudar o nome <-----------------------
-const startButtonsEvents = document.querySelector('[data-start]');
-
-startButtonsEvents.addEventListener('click', (e) => {
-  const scanButton = e.target.dataset.button; 
-
-  if (scanButton === 'start-game') getStartMenuEvents(scanButton);
-  if (scanButton === 'add-new-word') getStartMenuEvents(scanButton);
-  if (scanButton === 'close-event-start-game') getStartMenuEvents(scanButton);
-  if (scanButton === 'info') getStartMenuEvents(scanButton);
-  if (scanButton === 'exit') getStartMenuEvents(scanButton);
-  if (scanButton === 'close-event-info') getStartMenuEvents(scanButton);
-  if (scanButton === 'save-new-word') getStartMenuEvents(scanButton);
-
-})
-
-startButtonsEvents.addEventListener('click', (e) => {
-  const scanButton = e.target.dataset.button; 
-
-  if (scanButton === 'random-mode') getGameMode(scanButton);
-  if (scanButton === 'normal-mode') getGameMode(scanButton);
-  if (scanButton === 'hard-mode') getGameMode(scanButton);
+  if (scannerButton === 'dark-mode' || scannerButton === 'image-fix') toggleMode();
+  if (scannerButton === 'start-game') getStartMenuEvents(scannerButton);
+  if (scannerButton === 'random-mode') getGameMode(scannerButton);
+  if (scannerButton === 'normal-mode') getGameMode(scannerButton);
+  if (scannerButton === 'hard-mode') getGameMode(scannerButton);
+  if (scannerButton === 'add-new-word') getStartMenuEvents(scannerButton);
+  if (scannerButton === 'close-event-start-game') getStartMenuEvents(scannerButton);
+  if (scannerButton === 'info') getStartMenuEvents(scannerButton);
+  if (scannerButton === 'exit') getStartMenuEvents(scannerButton);
+  if (scannerButton === 'close-event-info') getStartMenuEvents(scannerButton);
+  if (scannerButton === 'save-new-word') getStartMenuEvents(scannerButton);
 })

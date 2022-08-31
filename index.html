@@ -7,8 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Smooch&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./src/styles/media-query.css">
-    <link rel="stylesheet" href="./src/styles/startdeprecad.css">
     <link rel="stylesheet" href="./src/styles/game.css">
     <title>4K</title>
     <link rel="stylesheet" href="./src/styles/global.css">
@@ -17,12 +15,12 @@
     <link rel="stylesheet" href="./src/styles/start/menu-start.css">
     <link rel="stylesheet" href="./src/styles/start/menu-word.css">
   </head>
-  <body class="container">
+  <body class="container" data-app>
     <header class="header wrap">
-      <button class="header__darkmode-button" data-dark-mode>
-        <img class="header__darkmode-image--normal" src="./src/assets/icon/moon-light.svg" />
-        <img class="header__darkmode-image--sun" src="./src/assets/icon/sun-dim-light.svg" />
-        <img class="header__darkmode-image--moon"src="./src/assets/icon/moon-light-d.svg" />
+      <button class="header__darkmode-button" data-dark-mode data-button="dark-mode">
+        <img class="header__darkmode-image--normal" src="./src/assets/icon/moon-light.svg" data-button="image-fix"/>
+        <img class="header__darkmode-image--sun" src="./src/assets/icon/sun-dim-light.svg" data-button="image-fix" />
+        <img class="header__darkmode-image--moon"src="./src/assets/icon/moon-light-d.svg" data-button="image-fix"/>
       </button>
       <a class="header__link" href="https://github.com/p4kz/four-k" target="_blank">p4k</a>
     </header>

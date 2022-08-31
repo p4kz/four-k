@@ -19,7 +19,7 @@ const disabled = (tag, boolean) => {
 
 const animation = (tag, value) => {
   setTimeout(() => {
-    opacity(tag, value)
+    opacity(tag, value);
   }, 200)
 }
 
