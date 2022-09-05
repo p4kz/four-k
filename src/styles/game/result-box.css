@@ -1,0 +1,13 @@
+.game__result-box {
+  margin: .5rem 0 .5rem 0;
+}
+
+.game__result-box--text {
+  opacity: 0;
+  text-align: center;
+}
+
+.game__result-box--resp {
+  text-align: center;
+  font-size: 3rem; 
+}

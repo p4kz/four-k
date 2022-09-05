@@ -4,12 +4,13 @@ const wordData = [
   'MACACO', 'GIRAFA', 'CAVALO', 'CACHORRO', 'GALINHA', 'TUCANO', 'CROCODILO', 'PAPAGAIO', 'AVESTRUZ', 'RAPOSA', 'TIGRE', 'COBRA', 'GORILA'
 ]
 
-const keyboard = document.querySelector('.keyboard-box')
-const secretWord = document.querySelector('.secret-word')
-const image = document.querySelector('.image')
-const response = document.querySelector('.response')
-const infoResponse = document.querySelector('.info-response')
-const infoControl = document.querySelector('.info-control')
+const image = document.querySelector('[data-image]')
+const secretWord = document.querySelector('[data-response]')
+const infoResponse = document.querySelector('[data-info-response]')
+const infoControl = document.querySelector('[data-control-text]')
+
+const keyboard = document.querySelector('[data-control-keyboard]')
+const response = document.querySelector('[data-control-response]')
 
 let userRandomMode = Math.floor((Math.random() * 5) + 1)
 let userHardMode = 3
@@ -26,13 +27,13 @@ function randomWord() {
 
 function generateButtons() {
   const keys = `QWERTYUIOPASDFGHJKLZX1CVBNM2`.split('').map(letter => `
-    <button
-    class="btn-keyboard"
-    id="${letter}"
-    onClick="handleGuess('${letter}')"
-    >
-    ${letter}
-    </button>
+  <button
+  class="game__control-box--keyboard-button"
+  id="${letter}"
+  onClick="handleGuess('${letter}')"
+  >
+  ${letter}
+  </button>
   `).join('')
   
   keyboard.innerHTML = keys
@@ -46,7 +47,7 @@ function generateButtons() {
 function handleGuess(chosenLetter) {
   guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null
   document.querySelector(`#${chosenLetter}`).setAttribute('disabled', true)
-
+  
   if (answer.indexOf(chosenLetter) >= 0) {
     guessedWord() 
     youWon()
@@ -58,6 +59,7 @@ function handleGuess(chosenLetter) {
   }
 }
 
+
 function updadeImage() {
   image.src = `./src/assets/img/try${attempts}.svg`
 }
@@ -65,18 +67,18 @@ function updadeImage() {
 function guessedWord() {
   wordStatus = answer.split('').map(letter => (
     guessed.indexOf(letter) >= 0 ? letter : ' _ '
-  )).join('')
-
-  secretWord.innerHTML = wordStatus
-}
-
+    )).join('')
+    
+    secretWord.innerHTML = wordStatus
+  }
+  
 function updateAttempts() {
   document.querySelector('.attempts').innerHTML = attempts
 }
 
 function youWon() {
   if(wordStatus === answer) {
-    keyboard.innerHTML = `<p class="response">Você venceu<p>`
+    keyboard.innerHTML = `<p class="game__control-box--response" data-control-response>Você venceu<p>`
     show(infoControl, 'none')
   }
 }
@@ -85,7 +87,7 @@ function youLost() {
   if(attempts === maxAttempts) {
     show(infoResponse, '1')
     secretWord.innerHTML = `${answer}`
-    keyboard.innerHTML = `<p class="response">Você perdeu<p>`
+    keyboard.innerHTML = `<p class="game__control-box--response" data-control-response>Você perdeu<p>`
     show(infoControl, 'none')
   }
 }

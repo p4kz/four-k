@@ -1,0 +1,5 @@
+.game {
+  display: none;
+  margin: 0 auto 0 auto;
+  color: var(--font-primary);
+}
